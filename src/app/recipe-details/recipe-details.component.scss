@@ -1,0 +1,121 @@
+.recipe_card {
+  cursor: pointer;
+  width: 60%;
+  height: 270px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 5px;
+  background-color: #f3f2fa;
+  margin: 50px 350px;
+}
+.recipe--image {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.recipe--title {
+  font-size: 18px;
+}
+.recipe--desc {
+  font-size: 11px;
+}
+
+.del-btn{
+  padding: 10px 18px 10px 18px;
+  border-style: groove;
+  border-width: 1px;
+  border-color: red;
+  background-color: white;
+  color: red;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.del-btn:hover{
+  background-color: red;
+  color: white;
+  transition: 0.3s;
+}
+
+.edt-btn{
+  padding: 12px 25px 12px 25px;
+  border-style: groove;
+  border-width: 1px;
+  border-color: green;
+  background-color: white;
+  color: green;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+}
+
+.edt-btn:hover{
+  background-color: green;
+  color: white;
+  transition: 0.3s;
+}
+
+
+.add-photo{
+  border-style: dashed;
+  border-width: 2px;
+  border-radius: 10px;
+  background-color: #3825b14d;
+  padding: 10px 50px 10px 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #3825b1b9;
+  width: 350px;
+  
+}
+
+
+input[type="file"]{
+  display: none;
+}
+
+label{
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: underline;
+  color: rgb(68, 68, 68);
+}
+
+label:active{
+  transform: scale(0.9);
+}
+
+.add-btn{
+
+  color: white;
+  background-color: #E4E3EB;
+  padding: 10px 200px 10px 200px;
+  margin-top: 20px;
+  margin-right: 40px;
+  border-style: none;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+}
+
+.add-btn:hover{
+  transition: 0.2s;
+  background-color: rgb(0, 110, 0);
+}
+
+#title,#desc,#ingre,#instruc{
+  padding: 10px; 
+  border-radius: 10px;
+  border-style: groove;
+  border-width: 1px;
+}

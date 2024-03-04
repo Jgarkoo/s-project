@@ -1,0 +1,15 @@
+<div class="container">
+  <ng-container *ngFor="let recipe of recipesData">
+    <div [routerLink]="['/recipe', recipe.id]" class="recipe_card">
+      <div class="recipe--image">
+        <img [src]="recipe.image | convertImg" alt="" />
+      </div>
+      <div class="recipe--title">
+        <h2>{{ recipe.title }}</h2>
+      </div>
+      <div class="recipe--desc">
+        <p>{{ recipe.description }}</p>
+      </div>
+    </div>
+  </ng-container>
+</div>

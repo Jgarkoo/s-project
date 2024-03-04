@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="container-bottom">
+        <div class="bk-hmpg">
+            <button  *ngIf="!recipeId" class="btn" routerLink="../home">
+                &#8249;
+            </button >
+            <div *ngIf="recipeId"   routerLink="../home">
+                
+            </div>
+        </div>
+        <div class="adding-recipes" [formGroup]="addRecipeForm">
+            <div class="recipes">
+                <div>
+                    <h2>
+                        Image:
+                    </h2>
+                    <div class="add-photo">
+                        <img src="../assets/img/folder-add.png" id="pt-btn"  alt="Add">
+                        <p style="color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                            Put Photo here or
+                                <input type="file" id="uploadBtn"  (change)="onFileChange($event)">
+                                    <label for="uploadBtn" style="  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                        Chose Photo
+                                    </label>
+                            </p>
+                    </div>
+                </div>
+                <div>
+                    <h2>
+                        Title:
+                    </h2>
+                    <input type="text"  placeholder="Enter title" id="title" formControlName="title">
+                </div>
+                <div>
+                    <h2>
+                        Description:
+                    </h2>
+                    <input type="text" placeholder="Enter Description" id="desc" formControlName="description">
+                </div>
+                <div>
+                    <h2>
+                        Ingredients:
+                    </h2>
+                    <input type="text"  placeholder="Enter Ingredients" id="ingre" formControlName="ingredients">
+                </div>
+                <div>
+                    <h2>
+                        Instrucitons:
+                    </h2>
+                    <input type="text"  placeholder="Enter Instrucitons" id="instruc"  formControlName="instructions">
+                </div>
+            </div>
+            <button *ngIf="!recipeId" class="add-btn" (click)="addIngredient()">
+                Add
+            </button>
+            <button *ngIf="recipeId" class="add-btn" (click)="editRecipe()">
+                Edit
+            </button>
+
+          <p *ngIf="successMessage">
+            operation was successful
+          </p>
+        </div>
+    </div>
+</div>
+
+

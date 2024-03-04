@@ -1,0 +1,34 @@
+<div *ngIf="recipe" class="recipe_card">
+  <div>
+  <div class="recipe--image">
+    <img [src]="recipe.image | convertImg" alt=" " />
+  </div>
+  <div class="recipe--title">
+    <h2>{{ recipe.title }}</h2>
+  </div>
+  <div class="recipe--desc">
+    <p>{{ recipe.description }}</p>
+  </div>
+  <div class="recipe--desc">
+    <p>{{ recipe.ingredients }}</p>
+  </div>
+  <div class="recipe--desc">
+    <p>{{ recipe.instructions }}</p>
+  </div>
+</div>
+  <div>
+    <button  class="edt-btn" (click)="callEditRecipe()">
+      Edit
+    </button>
+  </div>
+  <div >
+    <button class="del-btn" (click)="deleteRecipe()">
+      Delete
+    </button>
+  </div>
+</div>
+
+<div *ngIf="showRecipe" style="display: block; margin-left: 50px;">
+  <app-add-recipe [recipeId]="recipe.id" (recipeAdd)="onRecipeAdd($event)" [recipe]="recipe"></app-add-recipe>
+</div>
+

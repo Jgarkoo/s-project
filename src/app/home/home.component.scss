@@ -1,0 +1,38 @@
+.container {
+  margin: 30px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  height: calc(100% - 90px);
+  gap: 20px;
+  .recipe_card {
+    cursor: pointer;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+    background-color: #f3f2fa;
+  }
+  .recipe--image {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .recipe--title {
+    font-size: 18px;
+  }
+  .recipe--desc {
+    font-size: 11px;
+  }
+}
